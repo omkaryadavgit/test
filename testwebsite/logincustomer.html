@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>AvayaKart</title> 
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta charset="utf-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+          <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+<script type="text/javascript">
+    var frm = $('login_form');
+    frm.submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: frm.attr('method'),
+            url: frm.attr('action'),
+            data: frm.serialize(),
+            success: function (data) {
+                console.log('Submission was successful.');
+                console.log(data);
+            },
+            error: function (data) {
+                console.log('An error occurred.');
+                console.log(data);
+            },
+        });
+    });
+</script>
+   <!--Navbar-->
+      <nav class="navbar" style='background-color: #42a5f5;' align="center">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+                  <ul class="nav navbar-nav">
+            <li ><a href="#">Home</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+                
+                <li><a href="#"> Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span ></span> </a></li>
+            </ul>
+            
+      </nav>
+
+</head>
+<body>
+    <div class="container">
+    </br> </br> </br> </br>
+
+    </br>
+    <div >
+            <h4 align="center">Login</h4>
+           
+        <div align="center" class="col-md-4 mid-side-home-outer"></div>
+        <div   class="col-md-4 left-side-home-outer panel panel-default card-panel hoverable">
+
+            
+                </br>
+                <h4 align="left"></h4>
+            <form action="/logincustomer" method="post" id="login_form">
+                <div class="form-group">
+                <div class="file-field input-field">
+                <div class="form-group">
+
+                </div>
+                <div class="row">
+                <div class="input-field col s12">
+                        <input type="text"  name="cust_email_loginform" class="validate" id="name" required maxlength="50" minlength="4">
+                        <label for="name">Email or mobile phone number</label>
+                      </div>
+                <div class="input-field col s12">
+                        <input type="password"  name="cust_pwd_loginform"  class="validate" id="pwd" maxlength="50" minlength="4" required>
+                        <label for="pwd">Password</label>
+                      </div>
+                      <div class="input-field col s12">
+                <button type="submit" class="btn btn-warning">Continue</button></div>
+            </div>
+            </div>
+            </form>
+            <div class="input-field col s12">
+            <a href="/forgotpassword" data-toggle="tooltip" title="click here if problem logging in">Forgot Password?</a></div>
+            </br> </br>
+        </div>
+    </div>
+        <div align="center" class="col-md-4 right-side-home-outer"></div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+</body>
+</html>
+ 
